@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  resources :customers
   resources :callcenter_files
   resources :laboratories
   resources :clinics
   resources :bitec
+  
+  post 'callcenter_files/import' => 'callcenter_files#import'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

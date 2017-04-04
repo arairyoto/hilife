@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  uketsuke_id: MyString
+  nyudenbi: MyString
+  nyuden_jikoku: MyString
+  shosai: MyString
+
+two:
+  customer_id: 1
+  uketsuke_id: MyString
+  nyudenbi: MyString
+  nyuden_jikoku: MyString
+  shosai: MyString

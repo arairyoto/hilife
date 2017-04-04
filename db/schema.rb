@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404020647) do
+ActiveRecord::Schema.define(version: 20170404075544) do
 
   create_table "callcenter_files", force: :cascade do |t|
     t.string   "file_name"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20170404020647) do
     t.string   "raiinsha_denwa"
     t.string   "tokki_jikou"
     t.string   "call_kekka"
+    t.string   "check"
+    t.boolean  "marketing"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
@@ -52,6 +54,46 @@ ActiveRecord::Schema.define(version: 20170404020647) do
     t.string   "licence"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "customer_calls", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.string   "uketsuke_id"
+    t.string   "nyudenbi"
+    t.string   "nyuden_jikoku"
+    t.string   "shosai"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "customer_visit_records", force: :cascade do |t|
+    t.integer  "customer_visit_id"
+    t.string   "shinryobi"
+    t.string   "shinryo_jikoku"
+    t.string   "shinryo_naiyo"
+    t.string   "jikai_shinryobi"
+    t.string   "jikai_shinryo_jikoku"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "customer_visits", force: :cascade do |t|
+    t.integer  "customer_id"
+    t.integer  "clinic_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "name_kana"
+    t.string   "sex"
+    t.string   "zip_code"
+    t.string   "tel"
+    t.boolean  "marketing"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "address"
   end
 
   create_table "laboratories", force: :cascade do |t|

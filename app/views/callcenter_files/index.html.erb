@@ -2,6 +2,11 @@
 
 <h1>Listing Callcenter Files</h1>
 
+<%= form_tag({controller: "callcenter_files", action: "import", method: "post"}, {multipart: true}) do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "ファイルのインポート" %>
+<% end %>
+
 <table>
   <thead>
     <tr>

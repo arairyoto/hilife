@@ -1,5 +1,16 @@
 class CallcenterFilesController < ApplicationController
   before_action :set_callcenter_file, only: [:show, :edit, :update, :destroy]
+  
+  def import
+      #file名が同一のものがあれば登録できないようにする(二重登録防止)
+      # filename = params[:name]
+      # if CallcenterFile.where(file_name: filename).empty? then
+      #     CallcenterFile.import(params[:file], filename)
+      # else
+      # end
+      CallcenterFile.import(params[:file])
+      redirect_to "/callcenter_files"
+  end
 
   # GET /callcenter_files
   # GET /callcenter_files.json

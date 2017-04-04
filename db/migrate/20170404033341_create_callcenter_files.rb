@@ -21,8 +21,8 @@ class CreateCallcenterFiles < ActiveRecord::Migration
       t.string :raiinsha_denwa
       t.string :tokki_jikou
       t.string :call_kekka
-      t.string :check
-      t.boolean :marketing, default:False
+      t.string :check, default: '未確認'
+      t.boolean :marketing, default: False
 
       t.timestamps null: false
     end

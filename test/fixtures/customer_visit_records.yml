@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_visit_id: 1
+  shinryobi: MyString
+  shinryo_jikoku: MyString
+  shinryo_naiyo: MyString
+  jikai_shinryobi: MyString
+  jikai_shinryo_jikoku: MyString
+
+two:
+  customer_visit_id: 1
+  shinryobi: MyString
+  shinryo_jikoku: MyString
+  shinryo_naiyo: MyString
+  jikai_shinryobi: MyString
+  jikai_shinryo_jikoku: MyString
