@@ -1,0 +1,1 @@
+json.partial! "callcenter_files/callcenter_file", callcenter_file: @callcenter_file

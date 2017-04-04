@@ -1,0 +1,1 @@
+json.array! @callcenter_files, partial: 'callcenter_files/callcenter_file', as: :callcenter_file

@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  file_name: MyString
+  uketsuke_id: MyString
+  uketsuke_kubun: MyString
+  yoyaku_kubun: MyString
+  nyudenbi: MyString
+  nyuden_jikoku: MyString
+  uketsuke_sha: MyString
+  kibou_iin: MyString
+  baitaimei: MyString
+  baitai_shousai: MyString
+  shoshin_yoyakubi: MyString
+  shoshin_yoyakujikoku: MyString
+  raiinshamei_kana: MyString
+  raiinshamei_kanji: MyString
+  raiinsha_seibetsu: MyString
+  raiinsya_yubinbangou: MyString
+  raiinsha_jusyo: MyString
+  raiinsha_denwa: MyString
+  tokki_jikou: MyString
+  call_kekka: MyString
+  check: MyString
+  marketing: false
+
+two:
+  file_name: MyString
+  uketsuke_id: MyString
+  uketsuke_kubun: MyString
+  yoyaku_kubun: MyString
+  nyudenbi: MyString
+  nyuden_jikoku: MyString
+  uketsuke_sha: MyString
+  kibou_iin: MyString
+  baitaimei: MyString
+  baitai_shousai: MyString
+  shoshin_yoyakubi: MyString
+  shoshin_yoyakujikoku: MyString
+  raiinshamei_kana: MyString
+  raiinshamei_kanji: MyString
+  raiinsha_seibetsu: MyString
+  raiinsya_yubinbangou: MyString
+  raiinsha_jusyo: MyString
+  raiinsha_denwa: MyString
+  tokki_jikou: MyString
+  call_kekka: MyString
+  check: MyString
+  marketing: false

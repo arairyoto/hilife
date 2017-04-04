@@ -1,0 +1,105 @@
+<%= form_for(@callcenter_file) do |f| %>
+  <% if @callcenter_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@callcenter_file.errors.count, "error") %> prohibited this callcenter_file from being saved:</h2>
+
+      <ul>
+      <% @callcenter_file.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :file_name %><br>
+    <%= f.text_field :file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :uketsuke_id %><br>
+    <%= f.text_field :uketsuke_id %>
+  </div>
+  <div class="field">
+    <%= f.label :uketsuke_kubun %><br>
+    <%= f.text_field :uketsuke_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :yoyaku_kubun %><br>
+    <%= f.text_field :yoyaku_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :nyudenbi %><br>
+    <%= f.text_field :nyudenbi %>
+  </div>
+  <div class="field">
+    <%= f.label :nyuden_jikoku %><br>
+    <%= f.text_field :nyuden_jikoku %>
+  </div>
+  <div class="field">
+    <%= f.label :uketsuke_sha %><br>
+    <%= f.text_field :uketsuke_sha %>
+  </div>
+  <div class="field">
+    <%= f.label :kibou_iin %><br>
+    <%= f.text_field :kibou_iin %>
+  </div>
+  <div class="field">
+    <%= f.label :baitaimei %><br>
+    <%= f.text_field :baitaimei %>
+  </div>
+  <div class="field">
+    <%= f.label :baitai_shousai %><br>
+    <%= f.text_field :baitai_shousai %>
+  </div>
+  <div class="field">
+    <%= f.label :shoshin_yoyakubi %><br>
+    <%= f.text_field :shoshin_yoyakubi %>
+  </div>
+  <div class="field">
+    <%= f.label :shoshin_yoyakujikoku %><br>
+    <%= f.text_field :shoshin_yoyakujikoku %>
+  </div>
+  <div class="field">
+    <%= f.label :raiinshamei_kana %><br>
+    <%= f.text_field :raiinshamei_kana %>
+  </div>
+  <div class="field">
+    <%= f.label :raiinshamei_kanji %><br>
+    <%= f.text_field :raiinshamei_kanji %>
+  </div>
+  <div class="field">
+    <%= f.label :raiinsha_seibetsu %><br>
+    <%= f.text_field :raiinsha_seibetsu %>
+  </div>
+  <div class="field">
+    <%= f.label :raiinsya_yubinbangou %><br>
+    <%= f.text_field :raiinsya_yubinbangou %>
+  </div>
+  <div class="field">
+    <%= f.label :raiinsha_jusyo %><br>
+    <%= f.text_field :raiinsha_jusyo %>
+  </div>
+  <div class="field">
+    <%= f.label :raiinsha_denwa %><br>
+    <%= f.text_field :raiinsha_denwa %>
+  </div>
+  <div class="field">
+    <%= f.label :tokki_jikou %><br>
+    <%= f.text_field :tokki_jikou %>
+  </div>
+  <div class="field">
+    <%= f.label :call_kekka %><br>
+    <%= f.text_field :call_kekka %>
+  </div>
+  <div class="field">
+    <%= f.label :check %><br>
+    <%= f.text_field :check %>
+  </div>
+  <div class="field">
+    <%= f.label :marketing %><br>
+    <%= f.check_box :marketing %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

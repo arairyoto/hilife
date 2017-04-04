@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clinics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>簡略名</th>
+      <th>正式名</th>
+      <th>医院名(保証カード表示名)</th>
+      <th>医院長名</th>
+      <th>郵便番号</th>
+      <th>住所</th>
+      <th>TEL</th>
+      <th>FAX</th>
+      <th>Email</th>
+      <th>備考</th>
+      <th>ライセンス区分</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clinics.each do |clinic| %>
+      <tr>
+        <td><%= clinic.abb_name %></td>
+        <td><%= clinic.name %></td>
+        <td><%= clinic.hosho_name %></td>
+        <td><%= clinic.hd_name %></td>
+        <td><%= clinic.zip_code %></td>
+        <% href = 'https://www.google.co.jp/maps/place/'+clinic.address.to_s.strip %>
+        <td><%= clinic.address %> <a href=<%= href %> >MAP</a></td>
+        <td><%= clinic.tel %></td>
+        <td><%= clinic.fax %></td>
+        <td><%= clinic.email %></td>
+        <td><%= clinic.remarks %></td>
+        <td><%= clinic.licence %></td>
+        <td><%= link_to 'Show', clinic %></td>
+        <td><%= link_to 'Edit', edit_clinic_path(clinic) %></td>
+        <td><%= link_to 'Destroy', clinic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clinic', new_clinic_path %>

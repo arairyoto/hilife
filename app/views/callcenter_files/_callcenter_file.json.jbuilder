@@ -1,0 +1,2 @@
+json.extract! callcenter_file, :id, :file_name, :uketsuke_id, :uketsuke_kubun, :yoyaku_kubun, :nyudenbi, :nyuden_jikoku, :uketsuke_sha, :kibou_iin, :baitaimei, :baitai_shousai, :shoshin_yoyakubi, :shoshin_yoyakujikoku, :raiinshamei_kana, :raiinshamei_kanji, :raiinsha_seibetsu, :raiinsya_yubinbangou, :raiinsha_jusyo, :raiinsha_denwa, :tokki_jikou, :call_kekka, :check, :marketing, :created_at, :updated_at
+json.url callcenter_file_url(callcenter_file, format: :json)

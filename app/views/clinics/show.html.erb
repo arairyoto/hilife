@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>簡略名:</strong>
+  <%= @clinic.abb_name %>
+</p>
+
+<p>
+  <strong>正式名:</strong>
+  <%= @clinic.name %>
+</p>
+
+<p>
+  <strong>医院名(保証カード表示名):</strong>
+  <%= @clinic.hosho_name %>
+</p>
+
+<p>
+  <strong>医院長名:</strong>
+  <%= @clinic.hd_name %>
+</p>
+
+<p>
+  <strong>郵便番号:</strong>
+  <%= @clinic.zip_code %>
+</p>
+
+<p>
+  <strong>住所:</strong>
+  <%= @clinic.address %>
+</p>
+
+<p>
+  <strong>TEL:</strong>
+  <%= @clinic.tel %>
+</p>
+
+<p>
+  <strong>FAX:</strong>
+  <%= @clinic.fax %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @clinic.email %>
+</p>
+
+<p>
+  <strong>備考:</strong>
+  <%= @clinic.remarks %>
+</p>
+
+<p>
+  <strong>ライセンス区分:</strong>
+  <%= @clinic.licence %>
+</p>
+
+<%= link_to 'Edit', edit_clinic_path(@clinic) %> |
+<%= link_to 'Back', clinics_path %>

@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Callcenter Files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ファイル名</th>
+      <th>受付ID</th>
+      <th>受付区分</th>
+      <th>予約区分</th>
+      <th>入電日</th>
+      <th>入電時刻</th>
+      <th>受付者</th>
+      <th>希望医院</th>
+      <th>媒体名</th>
+      <th>媒体詳細</th>
+      <th>初診予約日</th>
+      <th>初診予約時刻</th>
+      <th>来院者名(カナ)</th>
+      <th>来院者名(漢字)</th>
+      <th>来院者性別</th>
+      <th>来院者郵便番号</th>
+      <th>来院者住所</th>
+      <th>来院者電話番号</th>
+      <th>特記事項</th>
+      <th>コール結果</th>
+      <th>チェック</th>
+      <th>マーケティング対象</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @callcenter_files.each do |callcenter_file| %>
+      <tr>
+        <td><%= callcenter_file.file_name %></td>
+        <td><%= callcenter_file.uketsuke_id %></td>
+        <td><%= callcenter_file.uketsuke_kubun %></td>
+        <td><%= callcenter_file.yoyaku_kubun %></td>
+        <td><%= callcenter_file.nyudenbi %></td>
+        <td><%= callcenter_file.nyuden_jikoku %></td>
+        <td><%= callcenter_file.uketsuke_sha %></td>
+        <td><%= callcenter_file.kibou_iin %></td>
+        <td><%= callcenter_file.baitaimei %></td>
+        <td><%= callcenter_file.baitai_shousai %></td>
+        <td><%= callcenter_file.shoshin_yoyakubi %></td>
+        <td><%= callcenter_file.shoshin_yoyakujikoku %></td>
+        <td><%= callcenter_file.raiinshamei_kana %></td>
+        <td><%= callcenter_file.raiinshamei_kanji %></td>
+        <td><%= callcenter_file.raiinsha_seibetsu %></td>
+        <td><%= callcenter_file.raiinsya_yubinbangou %></td>
+        <td><%= callcenter_file.raiinsha_jusyo %></td>
+        <td><%= callcenter_file.raiinsha_denwa %></td>
+        <td><%= callcenter_file.tokki_jikou %></td>
+        <td><%= callcenter_file.call_kekka %></td>
+        <td><%= callcenter_file.check %></td>
+        <td><%= callcenter_file.marketing %></td>
+        <td><%= link_to 'Show', callcenter_file %></td>
+        <td><%= link_to 'Edit', edit_callcenter_file_path(callcenter_file) %></td>
+        <td><%= link_to 'Destroy', callcenter_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Callcenter file', new_callcenter_file_path %>

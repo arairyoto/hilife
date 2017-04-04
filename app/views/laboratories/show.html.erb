@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>正式名:</strong>
+  <%= @laboratory.name %>
+</p>
+
+<p>
+  <strong>技工士名:</strong>
+  <%= @laboratory.hd_name %>
+</p>
+
+<p>
+  <strong>郵便番号:</strong>
+  <%= @laboratory.zip_code %>
+</p>
+
+<p>
+  <strong>住所:</strong>
+  <%= @laboratory.address %>
+</p>
+
+<p>
+  <strong>TEL:</strong>
+  <%= @laboratory.tel %>
+</p>
+
+<p>
+  <strong>FAX:</strong>
+  <%= @laboratory.fax %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @laboratory.email %>
+</p>
+
+<p>
+  <strong>備考:</strong>
+  <%= @laboratory.remarks %>
+</p>
+
+<%= link_to 'Edit', edit_laboratory_path(@laboratory) %> |
+<%= link_to 'Back', laboratories_path %>

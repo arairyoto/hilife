@@ -1,0 +1,61 @@
+<%= form_for(@clinic) do |f| %>
+  <% if @clinic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clinic.errors.count, "error") %> prohibited this clinic from being saved:</h2>
+
+      <ul>
+      <% @clinic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :簡略名 %><br>
+    <%= f.text_field :abb_name %>
+  </div>
+  <div class="field">
+    <%= f.label :正式名 %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :医院名 %><br>
+    <%= f.text_field :hosho_name %>
+  </div>
+  <div class="field">
+    <%= f.label :医院長名 %><br>
+    <%= f.text_field :hd_name %>
+  </div>
+  <div class="field">
+    <%= f.label :郵便番号 %><br>
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :住所 %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :TEL %><br>
+    <%= f.text_field :tel %>
+  </div>
+  <div class="field">
+    <%= f.label :FAX %><br>
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :Email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :備考 %><br>
+    <%= f.text_field :remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :ライセンス区分 %><br>
+    <%= f.select :licence, [['M','M'],['L','L'],['S','S'],['N','N'],['25%','25%'],['30%','30%']] %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
